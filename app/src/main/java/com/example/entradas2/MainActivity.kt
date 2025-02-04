@@ -15,13 +15,24 @@ import androidx.work.WorkManager
 import com.example.webchecker.WebCheckerWorker
 import java.util.concurrent.TimeUnit
 import java.util.UUID
-
+/**
+ * MainActivity es la actividad principal de la aplicación.
+ * Esta actividad se encarga de configurar la interfaz de usuario,
+ * gestionar permisos de notificación y controlar el trabajo de verificación web
+ * con el uso de WorkManager.
+ */
 class MainActivity : AppCompatActivity() {
 
     private val workTag = "WebCheckerWork"
     private var workId = UUID.randomUUID()
     private var semaforo = "R"
 
+    /**
+     * Método de inicio de la actividad donde se configura la interfaz,
+     * se gestionan los permisos y se inicializan los elementos de la UI.
+     *
+     * @param savedInstanceState El estado guardado de la actividad (si existe)
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
@@ -54,6 +65,10 @@ class MainActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("WebCheckerPrefs", MODE_PRIVATE)
 
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            /**
+             * Método llamado cuando se selecciona una opción en el Spinner.
+             * Guarda el intervalo seleccionado en las preferencias.
+             */
             override fun onItemSelected(
                 parent: AdapterView<*>,
                 view: View?,
@@ -94,6 +109,9 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+    /**
+     * Detiene el trabajo en curso y limpia cualquier trabajo pendiente.
+     */
     private fun stopWork() {
         WorkManager.getInstance(this).cancelWorkById(workId)
         WorkManager.getInstance(this).pruneWork()

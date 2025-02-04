@@ -10,8 +10,22 @@ import androidx.work.Worker
 import androidx.work.WorkerParameters
 import org.jsoup.Jsoup
 
+/**
+ * WebCheckerWorker es una clase que extiende Worker para realizar tareas en segundo plano.
+ * En este caso, se utiliza para comprobar si una palabra específica se encuentra en una página web
+ * y, si es así, enviar una notificación al usuario.
+ *
+ * @param appContext Contexto de la aplicación
+ * @param workerParams Parámetros de trabajo proporcionados por el sistema
+ */
 class WebCheckerWorker(appContext: Context, workerParams: WorkerParameters) : Worker(appContext, workerParams) {
-
+    /**
+     * Realiza la tarea de verificar si la palabra buscada está presente en el contenido de la página web.
+     * Si la palabra se encuentra, envía una notificación al usuario.
+     * Si ocurre algún error o la tarea es detenida, el resultado es un fallo.
+     *
+     * @return El resultado de la tarea, puede ser éxito o fallo
+     */
     override fun doWork(): Result {
         try {
             val sharedPreferences = applicationContext.getSharedPreferences("WebCheckerPrefs", Context.MODE_PRIVATE)
@@ -36,7 +50,9 @@ class WebCheckerWorker(appContext: Context, workerParams: WorkerParameters) : Wo
 
         return Result.success()
     }
-
+    /**
+     * Envía una notificación al usuario indicando que la palabra ha sido encontrada en la página web.
+     */
     private fun sendNotification() {
         val context = applicationContext
 
