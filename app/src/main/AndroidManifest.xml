@@ -18,7 +18,7 @@
 
         <!-- Actividad principal con exportado explícito -->
         <activity android:name="com.example.entradas2.MainActivity"
-            android:label="@string/app_name"
+            android:label="BuscaWeb"
             android:theme="@style/Theme.Entradas2"
             android:exported="true"> <!-- Asegúrate de añadir este atributo -->
 

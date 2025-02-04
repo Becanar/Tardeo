@@ -70,8 +70,8 @@
 41-->C:\Users\www.laptoptekoop.nl\StudioProjects\Entradas\app\src\main\AndroidManifest.xml:20:19-68
 42            android:exported="true"
 42-->C:\Users\www.laptoptekoop.nl\StudioProjects\Entradas\app\src\main\AndroidManifest.xml:23:13-36
-43            android:label="@string/app_name"
-43-->C:\Users\www.laptoptekoop.nl\StudioProjects\Entradas\app\src\main\AndroidManifest.xml:21:13-45
+43            android:label="BuscaWeb"
+43-->C:\Users\www.laptoptekoop.nl\StudioProjects\Entradas\app\src\main\AndroidManifest.xml:21:13-37
 44            android:theme="@style/Theme.Entradas2" > <!-- Asegúrate de añadir este atributo -->
 44-->C:\Users\www.laptoptekoop.nl\StudioProjects\Entradas\app\src\main\AndroidManifest.xml:22:13-51
 45

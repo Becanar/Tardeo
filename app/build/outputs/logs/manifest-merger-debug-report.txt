@@ -117,7 +117,7 @@ MERGED from [androidx.room:room-runtime:2.5.0] C:\Users\www.laptoptekoop.nl\.gra
 activity#com.example.entradas2.MainActivity
 ADDED from C:\Users\www.laptoptekoop.nl\StudioProjects\Entradas\app\src\main\AndroidManifest.xml:20:9-31:20
 	android:label
-		ADDED from C:\Users\www.laptoptekoop.nl\StudioProjects\Entradas\app\src\main\AndroidManifest.xml:21:13-45
+		ADDED from C:\Users\www.laptoptekoop.nl\StudioProjects\Entradas\app\src\main\AndroidManifest.xml:21:13-37
 	android:exported
 		ADDED from C:\Users\www.laptoptekoop.nl\StudioProjects\Entradas\app\src\main\AndroidManifest.xml:23:13-36
 	android:theme
